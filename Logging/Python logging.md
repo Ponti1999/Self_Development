@@ -84,8 +84,16 @@ def main() -> None:
   logger.critical("Hello from Ponti!")
 ```
 
-
+Make sure to have a grasp on where the logs are stored and how is it stored. <br/>
+The law of log data how long can it saved and should be deleted. <br/>
 
 
 ## Resources:
 - [Python Logging: How to Write Logs Like a Pro!](https://www.youtube.com/watch?v=pxuXaaT1u3k)
+
+
+
+
+# Projects where I used this:
+-
+-

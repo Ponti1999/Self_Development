@@ -30,3 +30,5 @@ e.g. [Google](https://www.google.com)  <br/>
 If we want to reference to an image we can use ```![TextHere](https://www.google.com)``` <br/>
 (Also with the same with our uploaded images.) <br/>
 e.g. ![Google](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)  <br/>
+
+To insert image from our local machine / repository we can use ```<img src="PATH" alt="NAME" style="height: XXX px; width:YYY px;"/>``` <br/>
