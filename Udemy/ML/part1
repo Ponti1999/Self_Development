@@ -1,0 +1,388 @@
+print('First print and input codes')
+print('Ponti1999')
+# We have our file, we give it to our interpreter what turns it into bite code and it runs it in cpython vm
+
+name = input('What is your name? ')
+print(f'Hello {name}')
+
+# Python2 vs Python3
+# All programming languages get updated, in 2008 python 2 was used for a long time and wanted to create a new version
+# Python 2 and Python 3 are not compatible so Python 2 are still used where they didn't change and they called legacy code
+# Python 2 is not supported anymore, so we will use Python 3
+
+# To learn any new language there are 4 key things to master:
+# 1. Terms of the language
+# 2. Data types
+# 3. Actions, to tell our program to do something
+# 4. Best practices
+
+# Fundamental Data types, all the options we have in python
+int # integer
+float # floating point number, decimal number
+bool # True or False
+str # string, text
+list # ordered sequence of objects
+tuple # ordered immutable sequence of objects
+set # unordered collection of unique objects
+dict # unordered key:value pairs
+
+# Classes -> custom types
+
+# Specialized Data Types
+# They are not built into python, but we need can use them from other libraries
+
+# None -> absence of value / nothingness
+None
+
+# Data type practice
+print('Data types practice')
+print(type(2 + 4))
+print(type(2 - 4))
+print(type(2 * 4))
+print(type(2 / 4))
+print(2 ** 4)
+print(6 // 4)
+print(5 % 4)
+
+
+# Mat functions
+print('Math functions')
+print(round(3.1))
+print(abs(-20))
+
+
+# Developer Fundamentals 1 (how to avoid mistakes), be efficient
+# Don't reed the dictionary, don't read the whole syntax and methods from the documentation
+# we can always google things and we will not use everything from the documentation just a smaller part
+# somethings are used a lot more than others, so we will learn the cover the smaller complicated part and the 20% which we use 80% of the time
+
+
+# Operator precedence
+print('Operator precedence')
+print(20 - 3 * 4)
+
+
+# There is an extra data type in python -> complex numbers
+complex
+# We can use bin() to convert a number to binary (starts with 0b)
+print('Binary numbers')
+print(bin(5))
+print(int('0b101', 2))
+
+
+# Variables
+# Need to store information in our computer, we can use variables to store information
+# Assigning a variable = binding a value to a name
+# Rules for variables:
+# snake_case
+# Start with lowercase or underscore
+# Letters, numbers, underscores
+# Case sensitive
+# Don't overwrite keywords
+print('Variables')
+iq = 190
+print(f'iq {iq}')
+
+user_iq = 190
+user_age = user_iq / 4
+a = user_age
+print(f'user_iq {user_iq}, a {a}')
+
+# Underscore in Python signifies a private variable or method, but it is not enforced by the language
+_user_iq = 190
+print(f'_user_iq {_user_iq}')
+
+a,b,c = 1,2,3
+print(f'a {a}, b {b}, c {c}')
+
+
+# Expressions vs Statements
+# Expression -> a piece of code that produces a value
+# user_iq / 4
+# Statement -> entire line of code that performs an action
+# user_age = user_iq / 4
+
+
+# Augmented assignment operator
+print('Augmented assignment operator')
+some_value = 5
+some_value += 2
+print(f'some_value {some_value}')
+some_value -= 2
+print(f'some_value {some_value}')
+some_value *= 2
+print(f'some_value {some_value}')
+
+# Strings -> str, a piece of text
+print('Strings')
+print(type("hello there"))
+cenoby = "hello there"
+grievous = 'general kenobi'
+username = 'supercoder'
+password = 'supersecret'
+long_string = '''
+like this
+0 0
+---
+'''
+print(f'long_string {long_string}')
+
+
+# String concatenation
+print('String concatenation')
+print('hello' + ' ' + 'there')
+print('general' + ' ' + 'kenobi')
+
+
+# Type conversion
+print('Type conversion')
+print(f'str(100) {str(100)} type: {type(str(100))}')
+
+
+# Escape sequence -> \" or \' is a string
+# \t -> tab, \n -> new line, \\ -> backslash, \b -> backspace, \r -> carriage return, ...
+print('Escape sequence')
+weather = 'It\'s sunny'
+print(f'weather {weather}')
+
+
+# Formatted strings
+print('Formatted strings')
+name = 'Ponti'
+age = 55
+print(f'Hi {name}, how are you? You are {age} years old')
+
+
+# String indexes
+# [start:stop:stepover]
+print('String indexes')
+indexes = 'me me me'
+print(f'indexes[0:4] {indexes[0:5]}')
+print(f'indexes[-2] {indexes[-2]}')
+
+
+# Immutability -> strings in Python are immutable, can't be changed
+indexes = 'me me me'
+# indexes[0] = 'M'
+
+
+# Built-in functions and methods
+print('Built-in functions and methods')
+print(f'len("hello") {len("hello")}')
+quote = 'to be or not to be'
+# Capitalize the first letter of the sentence
+print(f'quote.upper() {quote.upper()}, quote.capitalize() {quote.capitalize()}, quote.find("be") {quote.find("be")}, quote.replace("be", "me") {quote.replace("be", "me")}')
+
+
+# Booleans -> bool, True or False
+print('Booleans')
+name = 'Ponti'
+is_cool = False
+print(f'name {name}, is_cool {is_cool}')
+print(f'bool(1) {bool(1)}, bool("True") {bool("True")}')
+
+
+# Exercise
+print('Exercise')
+birth_year = input('What year were you born? ')
+current_year = 2023
+print(f'Your age is {current_year - int(birth_year)}')
+
+
+# Developer Fundamentals 2
+# Commenting your code
+# Guidelines for commenting:
+# Add valuable comments, the code should be self-explanatory
+# Only time when needed is when you are doing something complex, hard to read
+# More comments doesn't mean better code
+
+
+# Password checker
+# from getpass import getpass
+# password = getpass()
+username = input('Username: ')
+password = input('Password: ')
+print(f'Hello {username}, your password {"*" * len(password)} is {len(password)} letters long')
+
+
+# Lists -> list, ordered sequence of objects
+print('Lists')
+li0 = ['Luke', 'Leia', 'Han', 'Chewie']
+li1 = [1, 2, 3, 4, 5]
+li2 = [1, 2.5, 'a', True]
+amazon_cart = ['notebooks', 'sunglasses']
+print(f'amazon_cart[0] {amazon_cart[0]}')
+
+
+# List slicing
+print('List slicing')
+amazon_cart = ['notebooks', 'sunglasses', 'toys', 'grapes']
+print(f'amazon_cart[0:2] {amazon_cart[0:2]}')
+amazon_cart[0] = 'laptop'
+print(f'amazon_cart {amazon_cart}')
+new_cart = amazon_cart
+new_cart[0] = 'gum'
+print(f'new_cart {new_cart}, amazon_cart {amazon_cart}')
+# It happens because we are not copying the list, we are just referencing it to list
+new_cart = amazon_cart[:]
+new_cart[0] = 'gum'
+# Now it is modifying the new list instead of using the same memory address
+
+
+# Matrix -> list of lists
+# Comes up a lot in data science, image processing, machine learning
+print('Matrix')
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+print(f'matrix[0][1] {matrix[0][1]}')
+
+
+# List methods
+print('List methods')
+basket = [1, 2, 3, 4, 5]
+basket.append(100) # at the end of the list of the assigned variable
+basket.insert(4, 100) # at the index of the assigned variable
+basket.extend([100, 101]) # at the end of the list of the assigned variable
+basket.pop() # removes the last item of the list
+basket.pop(0) # removes the item at the index of the assigned variable
+basket.remove(4) # removes the item of the assigned variable
+basket.clear() # removes all the items of the list
+print(f'len(basket) {len(basket)}')
+
+basket = [1, 2, 3, 4, 5]
+print(f'basket.index(2) {basket.index(2)}') # where is the number 2 in the list
+basket = ['a', 'd', 'b', 'c', 'd', 'e', 'd']
+print(f'd in {basket}')
+print(f'basket.count("d") {basket.count("d")}')
+basket.sort()
+print(f'basket.sort() {basket}')
+print(f'basket.reverse() {sorted(basket)}') # returns a new list, doesn't modify the original one
+new_basket = basket.copy()
+basket.reverse()
+print(f'basket.reverse() {basket}')
+
+# Common list patterns
+print('Common list patterns')
+print(f'len(basket) {len(basket)}')
+basket.sort()
+basket.reverse()
+print(f'basket[::-1] {basket[::-1]}') # creates a new list, doesn't modify the original one
+
+print(f'list(range(1, 100)) {list(range(1, 100))}')
+sentence = ' '
+new_sentence = sentence.join(['hi', 'my', 'name', 'is', 'Ponti'])
+print(f'new_sentence {new_sentence}')
+new_sentence = ' '.join(['hi', 'my', 'name', 'is', 'Ponti'])
+print(f'new_sentence {new_sentence}')
+
+
+# List unpacking
+print('List unpacking')
+a,b,c, *other, d = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(f'a {a}, b {b}, c {c}, other {other}, d {d}')
+
+
+# None -> absence of value
+print('None')
+weapons = None
+print(f'weapons {weapons}')
+
+
+# Dictionaries -> dict, unordered key-value pairs (not next to each other in memory)
+print('Dictionaries')
+dictionary = { 'a': 1, 'b': 2, 'c': 'hello', 'd': [1, 2, 3], 'e': {'insideKey': 100}, 'f': True }
+print(f'dictionary["a"] {dictionary["a"]}')
+
+
+# Develop Fundamentals 3
+# Understanding Data Structures
+# Dictionaries stores more information than lists
+
+
+# Dictionary keys - keys must be immutable, can't be changed
+print('Dictionary keys')
+dictionary = { 123: [1, 2, 3], True: 'hello', 'same': 'hello', 'same': 'word' }
+print(f'dictionary[123] {dictionary[123]}')
+print(f'dictionary["same"] {dictionary["same"]}')
+
+
+# Dictionary methods
+print('Dictionary methods')
+user = { 'basket': [1, 2, 3], 'greet': 'hello' }
+print(f'user.get("age") {user.get("age")}') # with get method, if the key doesn't exist, it returns None
+print(f'user.get("age", 55) {user.get("age", 55)}') # with get method, if the key doesn't exist, it returns 55
+user = { 'basket': [1, 2, 3], 'greet': 'hello', 'age': 20 }
+print(f'user.get("age", 55) {user.get("age", 55)}') # with get method, if the key doesn't exist, it returns 20
+
+user2 = dict(name='JohnJohn')
+print(user2)
+
+print(f'"basket" in user { "basket" in user }')
+print(f'"hello" in user.keys() { "hello" in user.keys() }')
+print(f'"age" in user.keys() { "age" in user.keys() }')
+print(f'"hello" in user.values() { "hello" in user.values() }')
+print(f'user.items() {user.items()}')
+
+user2 = user.copy()
+print(f'user.clear() {user.clear()}')
+print(f'user2 {user2}')
+
+print(f'user2.pop("age") {user2.pop("age")}')
+print(f'user2.popitem() {user2.popitem()}')
+print(f'{user2.update({"age": 55})} {user2}')
+
+
+# Tuple -> immutable list
+# Makes code safer, predictable and faster
+# Dictionary keys and values pairs are tuples
+print('Tuple')
+my_tuple = (1, 2, 3, 4, 5)
+print(f'my_tuple[1] {my_tuple[1]}, but cannot modify')
+new_tuple = my_tuple[1:4]
+print(f'new_tuple {new_tuple}')
+x, y, z, *other = (1, 2, 3, 4, 5)
+print(f'x {x}, y {y}, z {z}, other {other}')
+print(f'my_tuple.count(5) {my_tuple.count(5)}')
+print(f'my_tuple.index(5) {my_tuple.index(5)}')
+print(f'len(my_tuple) {len(my_tuple)}')
+
+
+# Sets -> unordered collection of unique objects
+# Set doesn't support indexing
+print('Sets')
+my_set = {1, 2, 3, 4, 5, 5}
+my_set.add(100)
+my_set.add(2)
+print(f'my_set {my_set}')
+my_list = [1, 2, 3, 4, 5, 5]
+my_set = set(my_list)
+print(f'my_set {my_set}')
+print(f'1 in my_set {1 in my_set}')
+print(f'len(my_set) {len(my_set)}')
+print(f'list(my_set) {list(my_set)}')
+new_set = my_set.copy()
+my_set.clear()
+print(f'my_set after clear {my_set}')
+print(f'new_set {new_set}')
+
+my_set = {1,2,3,4,5}
+your_set = {4,5,6,7,8,9,10}
+print(f'my_set.difference(your_set) {my_set.difference(your_set)}')
+print(f'my_set.discard(5) {my_set.discard(5)}')
+print(f'my_set {my_set}')
+
+print(f'my_set.difference_update(your_set) {my_set.difference_update(your_set)}')
+print(f'my_set {my_set}')
+
+print(f'my_set.intersection(your_set) {my_set.intersection(your_set)}')
+
+print(f'my_set & your_set {my_set & your_set}')
+print(f'my_set.isdisjoint(your_set) {my_set.isdisjoint(your_set)}')
+
+print(f'my_set.union(your_set) {my_set.union(your_set)}')
+print(f'my_set | your_set {my_set | your_set}')
+
+print(f'my_set.issubset(your_set) {my_set.issubset(your_set)}')
+
+print(f'your_set.issuperset(my_set) {your_set.issuperset(my_set)}')

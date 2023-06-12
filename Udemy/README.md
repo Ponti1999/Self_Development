@@ -66,10 +66,24 @@ There are 3 types of ML:
   - The data is labeled and the program learns to predict the output from the input data.
   - We will know if the function is correct or not.
 - Unsupervised learning
-  -
+  - Data that doesn't have labels.
+  - We associata the data based on similarities.
 - Reinforcement learning
-  -
+  - Teaching the machines through rewards and punishments.
+
+
 ![ML types](./img/ml_types.png)
+
+
+![Build of our project](./img/project_build.png)
+
+
+SECTION 3 !!!
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
